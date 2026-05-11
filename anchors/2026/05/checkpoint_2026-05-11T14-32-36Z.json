@@ -1,0 +1,15 @@
+{
+  "checkpoint_root": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+  "checkpoint_id": "test-g46-smoke-001",
+  "generated_at": "2026-05-11T14:32:36.565209+00:00",
+  "org_id": "00000000-0000-0000-0000-000000000001",
+  "total_actions": 42,
+  "total_runs": 7,
+  "previous_anchor_commit": null,
+  "previous_checkpoint_root": null,
+  "release_tag": "anchor-test-g46-2026-05-11",
+  "proof_version": "proof1_v1",
+  "signature_version": "sig2_v1",
+  "anchoring_version": "anchor_v1",
+  "manifest_version": "anchor_manifest_v1"
+}
