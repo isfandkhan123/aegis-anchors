@@ -1,0 +1,15 @@
+{
+  "checkpoint_root": "f737c6cf4f1c7b075cc73465cf4e9172defbf9db201c79bf4eba4d16b6a867b5",
+  "checkpoint_id": "e27f9951",
+  "generated_at": "2026-05-05T00:00:00+00:00",
+  "org_id": "conversio-labs",
+  "total_actions": 421,
+  "total_runs": 421,
+  "previous_anchor_commit": null,
+  "previous_checkpoint_root": null,
+  "release_tag": "anchor-e27f9951-2026-05-05",
+  "proof_version": "proof1_v1",
+  "signature_version": "sig2_v1",
+  "anchoring_version": "anchor_v1",
+  "manifest_version": "anchor_manifest_v1"
+}
