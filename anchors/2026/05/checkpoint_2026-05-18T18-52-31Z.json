@@ -1,0 +1,15 @@
+{
+  "checkpoint_root": "e24b783deca75201735e21bafd2813d64acbad964defd82044b83cde2ebadecd",
+  "checkpoint_id": "e24b783deca75201-2026-05-18",
+  "generated_at": "2026-05-18T18:52:31.512637+00:00",
+  "org_id": "00000000-0000-0000-0000-000000000001",
+  "total_actions": 467,
+  "total_runs": 0,
+  "previous_anchor_commit": null,
+  "previous_checkpoint_root": null,
+  "release_tag": "anchor-e24b783d-2026-05-18",
+  "proof_version": "proof1_v1",
+  "signature_version": "sig2_v1",
+  "anchoring_version": "anchor_v1",
+  "manifest_version": "anchor_manifest_v1"
+}
