@@ -1,0 +1,24 @@
+{
+  "checkpoint_root": "2f0beed80c3198fc87e39600e16a89dc99d42365cdc7dc0f77a445c90532c166",
+  "checkpoint_id": "004b0c2d-7c06-4a4c-ad8d-59cc00455bda",
+  "generated_at": "2026-08-12T00:15:09.724140+00:00",
+  "org_id": "00000000-0000-0000-0000-000000000001",
+  "anchored_artifact": "ledger_action_chain",
+  "scope": "global_all_orgs",
+  "total_actions": 17041,
+  "total_runs": 17039,
+  "verification": {
+    "total_leaves": 17041,
+    "verified_ed25519": 16689,
+    "legacy_hmac_unverifiable": 320,
+    "unsigned": 30,
+    "legacy_unhashable": 2
+  },
+  "previous_anchor_commit": null,
+  "previous_checkpoint_root": null,
+  "release_tag": "anchor-004b0c2d-2026-08-12",
+  "proof_version": "proof1_v1",
+  "signature_version": "sig2_v1",
+  "anchoring_version": "anchor_v1",
+  "manifest_version": "anchor_manifest_v1"
+}
