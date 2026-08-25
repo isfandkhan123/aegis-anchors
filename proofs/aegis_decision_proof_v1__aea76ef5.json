@@ -1,0 +1,194 @@
+{
+  "proof_format": "aegis_decision_proof_v1",
+  "exported_note": "self-contained; verify with scripts/verify_decision_proof.py, no network needed",
+  "decision_id": "aea76ef5-5787-49bb-89e8-a4df5687768e",
+  "event_hash": "02d3afc630fb65845e949b8dcff1fb38ac78e0d29c7d7dec1a1538dea6c97522",
+  "decision": {
+    "org_id": "00000000-0000-0000-0000-000000000001",
+    "run_id": "c19c3811-95eb-408a-a3d8-deff99f0fa6c",
+    "seq": 1,
+    "action_type": "dev_adapter",
+    "tool_name": "dev_adapter.unknown",
+    "payload": "{\"schema_version\": \"decision_envelope_v1\", \"decision_id\": \"9ea43a7c-c2f6-4511-b8f8-6d74421a666c\", \"trace_id\": \"1c3813f7479a07ac21211bd095871ca6795e6e6f0a10b36be98c419ad6c8914d\", \"org_id\": \"00000000-0000-0000-0000-000000000001\", \"agent_id\": \"unknown\", \"adapter\": \"dev_adapter\", \"adapter_version\": \"unknown\", \"adapter_fingerprint\": \"338d47fc00c57e2c923dbf0f0cdd8901f2562a04bc6ea28839bf00eb77d3e26e\", \"policy_version\": \"dev_policy_v1\", \"policy_hash\": \"2e80b200cf04d91f113b7d9534ea68d342c00802a489feca829f5085085b5d02\", \"action\": \"test_verify\", \"action_type\": \"unknown\", \"target\": \"verified\", \"risk_level\": \"LOW\", \"confidence\": 0.9, \"governed_decision\": \"APPROVE\", \"required_approval\": true, \"reasons\": [], \"context\": {\"request_id\": \"9ea43a7c-c2f6-4511-b8f8-6d74421a666c\", \"trace_id\": \"1c3813f7479a07ac21211bd095871ca6795e6e6f0a10b36be98c419ad6c8914d\", \"org_id\": \"00000000-0000-0000-0000-000000000001\", \"adapter\": \"dev_adapter\", \"schema_version\": \"govern_action_v1\", \"idempotency_key\": null, \"ingress_source\": \"govern_api\", \"ingress_version\": \"f14_v1\", \"requested_at\": \"2026-05-08T14:24:45.375829+00:00\"}, \"intent_hash\": \"a0f7659e249d5c2f4fd90545b6895578857c84b1954c166f901528f7fe25cbd2\", \"source_decision_hash\": \"f27f456eed5959ff2cb6039f9f38f09b0e92f2ed02f553bfb05c99f9d3bbcc2f\", \"decision_locked_at\": \"2026-05-08T14:24:45.439275+00:00\", \"timestamp\": \"2026-05-08T14:24:45.375829+00:00\", \"envelope_hash\": \"d04035d3827832002014b4ee873b54e75660b813a314485efe6c6e5c6f783a09\", \"signature\": {\"ok\": true, \"signature_version\": \"sig2_v1\", \"algorithm\": \"ed25519\", \"signer_type\": \"aegis_ed25519_v1\", \"key_id\": \"ed25519_primary_v1\", \"signed_at\": \"2026-05-08T14:24:45.439485+00:00\", \"decision_id\": \"9ea43a7c-c2f6-4511-b8f8-6d74421a666c\", \"envelope_hash\": \"d04035d3827832002014b4ee873b54e75660b813a314485efe6c6e5c6f783a09\", \"signature\": \"DaDJPj+2GiYALEwr4bmFrPr2yWIoEIefJqOlQgF2O2Pwo3R6u0nWamAc+at9+1x85hxyDKlW//Q0RZVYsFBwCw==\", \"public_key\": \"Rq1yTwgKVKyaRJ3W7QUFAVvt7tQ0m3ETQ5mXngNaLm4=\", \"org_id\": \"00000000-0000-0000-0000-000000000001\"}, \"policy_registration_status\": \"REGISTERED\", \"signature_status\": \"SIGNED\", \"provenance\": {\"ledger_client_version\": \"lc1_v2\", \"enriched_at\": \"2026-05-08T14:24:45.439496+00:00\"}, \"canonical_envelope\": true, \"validation_status\": \"VALID\"}",
+    "policy_decision": "allow",
+    "policy_reason": "local_fallback_policy",
+    "status": "approved",
+    "prev_hash": null
+  },
+  "decision_envelope": {
+    "schema_version": "decision_envelope_v1",
+    "decision_id": "9ea43a7c-c2f6-4511-b8f8-6d74421a666c",
+    "trace_id": "1c3813f7479a07ac21211bd095871ca6795e6e6f0a10b36be98c419ad6c8914d",
+    "org_id": "00000000-0000-0000-0000-000000000001",
+    "agent_id": "unknown",
+    "adapter": "dev_adapter",
+    "adapter_version": "unknown",
+    "adapter_fingerprint": "338d47fc00c57e2c923dbf0f0cdd8901f2562a04bc6ea28839bf00eb77d3e26e",
+    "policy_version": "dev_policy_v1",
+    "policy_hash": "2e80b200cf04d91f113b7d9534ea68d342c00802a489feca829f5085085b5d02",
+    "action": "test_verify",
+    "action_type": "unknown",
+    "target": "verified",
+    "risk_level": "LOW",
+    "confidence": 0.9,
+    "governed_decision": "APPROVE",
+    "required_approval": true,
+    "reasons": [],
+    "context": {
+      "request_id": "9ea43a7c-c2f6-4511-b8f8-6d74421a666c",
+      "trace_id": "1c3813f7479a07ac21211bd095871ca6795e6e6f0a10b36be98c419ad6c8914d",
+      "org_id": "00000000-0000-0000-0000-000000000001",
+      "adapter": "dev_adapter",
+      "schema_version": "govern_action_v1",
+      "idempotency_key": null,
+      "ingress_source": "govern_api",
+      "ingress_version": "f14_v1",
+      "requested_at": "2026-05-08T14:24:45.375829+00:00"
+    },
+    "intent_hash": "a0f7659e249d5c2f4fd90545b6895578857c84b1954c166f901528f7fe25cbd2",
+    "source_decision_hash": "f27f456eed5959ff2cb6039f9f38f09b0e92f2ed02f553bfb05c99f9d3bbcc2f",
+    "decision_locked_at": "2026-05-08T14:24:45.439275+00:00",
+    "timestamp": "2026-05-08T14:24:45.375829+00:00",
+    "envelope_hash": "d04035d3827832002014b4ee873b54e75660b813a314485efe6c6e5c6f783a09",
+    "signature": {
+      "ok": true,
+      "signature_version": "sig2_v1",
+      "algorithm": "ed25519",
+      "signer_type": "aegis_ed25519_v1",
+      "key_id": "ed25519_primary_v1",
+      "signed_at": "2026-05-08T14:24:45.439485+00:00",
+      "decision_id": "9ea43a7c-c2f6-4511-b8f8-6d74421a666c",
+      "envelope_hash": "d04035d3827832002014b4ee873b54e75660b813a314485efe6c6e5c6f783a09",
+      "signature": "DaDJPj+2GiYALEwr4bmFrPr2yWIoEIefJqOlQgF2O2Pwo3R6u0nWamAc+at9+1x85hxyDKlW//Q0RZVYsFBwCw==",
+      "public_key": "Rq1yTwgKVKyaRJ3W7QUFAVvt7tQ0m3ETQ5mXngNaLm4=",
+      "org_id": "00000000-0000-0000-0000-000000000001"
+    },
+    "policy_registration_status": "REGISTERED",
+    "signature_status": "SIGNED",
+    "provenance": {
+      "ledger_client_version": "lc1_v2",
+      "enriched_at": "2026-05-08T14:24:45.439496+00:00"
+    },
+    "canonical_envelope": true,
+    "validation_status": "VALID"
+  },
+  "signature": {
+    "ok": true,
+    "key_id": "ed25519_primary_v1",
+    "org_id": "00000000-0000-0000-0000-000000000001",
+    "algorithm": "ed25519",
+    "signature": "DaDJPj+2GiYALEwr4bmFrPr2yWIoEIefJqOlQgF2O2Pwo3R6u0nWamAc+at9+1x85hxyDKlW//Q0RZVYsFBwCw==",
+    "signed_at": "2026-05-08T14:24:45.439485+00:00",
+    "public_key": "Rq1yTwgKVKyaRJ3W7QUFAVvt7tQ0m3ETQ5mXngNaLm4=",
+    "decision_id": "9ea43a7c-c2f6-4511-b8f8-6d74421a666c",
+    "signer_type": "aegis_ed25519_v1",
+    "envelope_hash": "d04035d3827832002014b4ee873b54e75660b813a314485efe6c6e5c6f783a09",
+    "signature_version": "sig2_v1"
+  },
+  "inclusion": {
+    "proof_version": "merkle_incl_v1",
+    "leaf_index": 19,
+    "leaf_count": 22023,
+    "event_hash": "02d3afc630fb65845e949b8dcff1fb38ac78e0d29c7d7dec1a1538dea6c97522",
+    "merkle_path": [
+      {
+        "sibling": "ae6273423ccbb8bb12b39f3cce61780e5f4c863f63873477e0c3e017d23bed05",
+        "position": "left"
+      },
+      {
+        "sibling": "f9604db12bbfc88d2d5d9c523a15bb6cc9c0bad3c6e766bb2fb6e3bfb8038271",
+        "position": "left"
+      },
+      {
+        "sibling": "089c7dc3ec2763ea9a91e5f3a5cec3521be606a3cb1a3e39918e959d9d2dfbb5",
+        "position": "right"
+      },
+      {
+        "sibling": "4ac90cbf380ece51789fdd708e8ef557b78f27cc0fcd2cec7dcbfa9ffd227e77",
+        "position": "right"
+      },
+      {
+        "sibling": "bf9d6de3c611fc371d0dff778c3d3e700bc068166b511385625c737be2380563",
+        "position": "left"
+      },
+      {
+        "sibling": "bbc9e360d2298518da1163800e89fa59205216b2eec3ff94f6845e848e129a0b",
+        "position": "right"
+      },
+      {
+        "sibling": "2a1ee357cabfb664f8e21f6f79ffad3c4fc20f629b642702c79bd7beaebde691",
+        "position": "right"
+      },
+      {
+        "sibling": "58e4a0d7184ff3f2e55f15e4b1b0f592b53cd52737ca5a79a95ab62686eaa5e7",
+        "position": "right"
+      },
+      {
+        "sibling": "5ad297cc9885b487c405c0d3cf83a462039d0e081aece5b54d20b07b033299bc",
+        "position": "right"
+      },
+      {
+        "sibling": "e859f0a626c4045b5bade38dac4a6621efc273d0920ab2d924e0e466312dfed1",
+        "position": "right"
+      },
+      {
+        "sibling": "549e99bf89a2e8f8d4ddec824d74aaa76738d5a71df80fd601b11e79fbdf776b",
+        "position": "right"
+      },
+      {
+        "sibling": "49f7b4f1f2e3ae764bfddf77e14a42774419981ac83a708e6e7aba5778079ce1",
+        "position": "right"
+      },
+      {
+        "sibling": "09d9492f59f78d7a2ee5c28276b8a1e4f71ac78f4ab59bb62f42b4af42c07891",
+        "position": "right"
+      },
+      {
+        "sibling": "b8de0e71b27e5aa9b17f263f78244ef4f7d73149de5da8523f4ac0d0599d7e3d",
+        "position": "right"
+      },
+      {
+        "sibling": "15546997010eaae4654558c621344fca7029fc7a77cdb7a1b8ea6edb6b950d07",
+        "position": "right"
+      }
+    ],
+    "root_hash": "7b40cc5b6e28c70fb2aeb5607b8f447797b4321a7578029c97d907056cd02db4",
+    "algorithm": "sha256",
+    "pairing": "hex_string"
+  },
+  "checkpoint": {
+    "checkpoint_id": "5805cf79-750d-45f7-accb-c028b9736581",
+    "root_hash": "7b40cc5b6e28c70fb2aeb5607b8f447797b4321a7578029c97d907056cd02db4",
+    "date": "2026-08-25",
+    "total_actions": 22023
+  },
+  "anchor": {
+    "release_tag": "anchor-5805cf79-750d-45f7-accb-c028b9736581-2026-08-25",
+    "anchor_json_b64": "ewogICJjaGVja3BvaW50X3Jvb3QiOiAiN2I0MGNjNWI2ZTI4YzcwZmIyYWViNTYwN2I4ZjQ0Nzc5N2I0MzIxYTc1NzgwMjljOTdkOTA3MDU2Y2QwMmRiNCIsCiAgImNoZWNrcG9pbnRfaWQiOiAiNTgwNWNmNzktNzUwZC00NWY3LWFjY2ItYzAyOGI5NzM2NTgxIiwKICAiZ2VuZXJhdGVkX2F0IjogIjIwMjYtMDgtMjVUMTU6MzM6MTIuNjc2NTYzKzAwOjAwIiwKICAib3JnX2lkIjogIjAwMDAwMDAwLTAwMDAtMDAwMC0wMDAwLTAwMDAwMDAwMDAwMSIsCiAgImFuY2hvcmVkX2FydGlmYWN0IjogImxlZGdlcl9hY3Rpb25fY2hhaW4iLAogICJzY29wZSI6ICJnbG9iYWxfYWxsX29yZ3MiLAogICJ0b3RhbF9hY3Rpb25zIjogMjIwMjMsCiAgInRvdGFsX3J1bnMiOiAxNzYzOCwKICAidmVyaWZpY2F0aW9uIjogewogICAgInRvdGFsX2xlYXZlcyI6IDIyMDIzLAogICAgInZlcmlmaWVkX2VkMjU1MTkiOiAyMTY1OSwKICAgICJsZWdhY3lfaG1hY191bnZlcmlmaWFibGUiOiAzMjAsCiAgICAidW5zaWduZWQiOiA0MSwKICAgICJsZWdhY3lfdW5oYXNoYWJsZSI6IDIsCiAgICAic2lnbmF0dXJlX2JyZWFrZG93biI6IHsKICAgICAgInVuc2lnbmVkIjogNDEsCiAgICAgICJlZDI1NTE5X3ZhbGlkIjogMjE2NTksCiAgICAgICJzaWcxX2htYWNfdW52ZXJpZmlhYmxlIjogMzIwLAogICAgICAiYmFkX2J1bmRsZSI6IDEKICAgIH0KICB9LAogICJyZWNvdmVyeSI6IG51bGwsCiAgImF0dHJpYnV0aW9uIjogewogICAgIm9rX3N0cmljdCI6IGZhbHNlLAogICAgIm9rIjogdHJ1ZSwKICAgICJhdHRyaWJ1dGFibGVfZWQyNTUxOSI6IDIxNjU5LAogICAgInVuYXR0cmlidXRhYmxlX3RvdGFsIjogMSwKICAgICJ1bmF0dHJpYnV0YWJsZV9leGN1c2VkIjogMSwKICAgICJ1bmF0dHJpYnV0YWJsZV9ibG9ja2luZyI6IDAsCiAgICAibWFsZm9ybWVkX3NpZ25hdHVyZSI6IDEsCiAgICAiZWQyNTUxOV9pbnZhbGlkIjogMCwKICAgICJlZDI1NTE5X3Vua25vd25fa2V5IjogMCwKICAgICJlZDI1NTE5X2tleV9taXNtYXRjaCI6IDAsCiAgICAiZWQyNTUxOV9ub19yZWdpc3RyeSI6IDAsCiAgICAiZGVjbGFyZWRfdW5zaWduZWQiOiA0MSwKICAgICJkZWNsYXJlZF9obWFjX3VudmVyaWZpYWJsZSI6IDMyMAogIH0sCiAgInZlcmlmaWNhdGlvbl9leGNlcHRpb25zIjogewogICAgImNvdW50IjogMSwKICAgICJleGN1c2FibGVfY2xhc3NpZmljYXRpb25zIjogWwogICAgICAiYmFkX2J1bmRsZSIKICAgIF0sCiAgICAic291cmNlIjogIi9hcHAvYXBwcy9hcGkvdmVyaWZpY2F0aW9uX2V4Y2VwdGlvbnMuanNvbiIsCiAgICAiYXBwbGllZCI6IFsKICAgICAgewogICAgICAgICJhY3Rpb25faWQiOiAiN2JiOWI0YjItN2I4Zi00OTc1LTg1NTQtNGU3YjA2MTcxODYwIiwKICAgICAgICAiY2xhc3NpZmljYXRpb24iOiAiYmFkX2J1bmRsZSIsCiAgICAgICAgInJlYXNvbiI6ICJvcGVyYXRvciBkZXBsb3ltZW50IGRpYWdub3N0aWMsIDIwMjYtMDgtMjJUMTQ6NTA6MTlaOiBhIGZpZWxkLWJpc2VjdGlvbiBwcm9iZSBvZiAvYWN0aW9ucy9wcm9wb3NlIGFwcGVuZGVkIHRoaXMgcm93IHdpdGggc2lnbmF0dXJlPXtcIm9rXCI6IHRydWV9LiBJdCBpcyBtYWxmb3JtZWQgYW5kIGNsYXNzaWZpZXMgbWFsZm9ybWVkIHBlcm1hbmVudGx5LiBUaGUgbGVkZ2VyIGlzIGFwcGVuZC1vbmx5IHNvIGl0IGNhbm5vdCBiZSByZW1vdmVkOyB0aGUgdmVyaWZpZXIgd2FzIE5PVCBhZGp1c3RlZCB0byBhY2NvbW1vZGF0ZSBpdC4iLAogICAgICAgICJyZWNvcmRlZF9ieSI6ICJkYTdhZGNlYy0zMTJlLTQ1ODctOWE5MC0wNzE5NDNhNDRiNTUiLAogICAgICAgICJncmFudGVkX2F0IjogIjIwMjYtMDgtMjJUMTU6MjA6MDBaIgogICAgICB9CiAgICBdLAogICAgIm5vdGUiOiAiRWFjaCBlbnRyeSBuYW1lcyBPTkUgYWN0aW9uIGlkIGFuZCB0aGUgZXhhY3QgY2xhc3NpZmljYXRpb24gaXQgaXMgZXhjdXNlZCBmb3IuIEFuIGV4Y2VwdGlvbiBuZXZlciBtYWtlcyBhIHJlY29yZCB2YWxpZCBhbmQgY2FuIG5ldmVyIGV4Y3VzZSBhIGNyeXB0b2dyYXBoaWMgZmFpbHVyZSBcdTIwMTQgaXQgcmVjb3JkcyB0aGF0IGEgbWFsZm9ybWVkIHJlY29yZCBpcyBrbm93biwgZXhwbGFpbmVkLCBhbmQgbm90IHBlcm1pdHRlZCB0byBzdG9wIHRoZSByZXN0IG9mIHRoZSBjaGFpbiBiZWluZyBhbmNob3JlZC4iCiAgfSwKICAicHJldmlvdXNfYW5jaG9yX2NvbW1pdCI6IG51bGwsCiAgInByZXZpb3VzX2NoZWNrcG9pbnRfcm9vdCI6IG51bGwsCiAgInJlbGVhc2VfdGFnIjogImFuY2hvci01ODA1Y2Y3OS03NTBkLTQ1ZjctYWNjYi1jMDI4Yjk3MzY1ODEtMjAyNi0wOC0yNSIsCiAgInByb29mX3ZlcnNpb24iOiAicHJvb2YxX3YxIiwKICAic2lnbmF0dXJlX3ZlcnNpb24iOiAic2lnMl92MSIsCiAgImFuY2hvcmluZ192ZXJzaW9uIjogImFuY2hvcl92MSIsCiAgIm1hbmlmZXN0X3ZlcnNpb24iOiAiYW5jaG9yX21hbmlmZXN0X3YxIgp9",
+    "anchor_sig_b64": "jJvFNPbMfP0zwhUtH60HQDppQ6xKlpVnoFj0zWuvJ5QNpCh1c0HDb3lD+Jdl2dChbZwCmn7jYbhrV/pIvgmABA==",
+    "anchor_public_key_pem": "-----BEGIN PUBLIC KEY-----\nMCowBQYDK2VwAyEAKTwKiK6dvfU6+p6v2uWbUsSD6ALlSkzW07RSk76JFzo=\n-----END PUBLIC KEY-----\n"
+  },
+  "verification_keys": {
+    "keys": [
+      {
+        "algorithm": "ed25519",
+        "key_id": "ed25519_primary_v1",
+        "note": "Signs every record up to the 2026-08-22 cutover. Its private half was readable by every local account on the host from at least 2026-05-11 (a mode-644 systemd drop-in plus systemd's D-Bus disclosure of Environment=). No evidence of compromise exists and none could \u2014 a D-Bus read leaves no trace. Records signed under this key are ATTESTED but, for the exposure window, are NOT EXCLUSIVELY ATTRIBUTABLE to the API: the signature proves the key was used, not who used it. Retired from SIGNING at the 2026-08-22 cutover; permanently valid for VERIFICATION of the 20,292 records it signed.",
+        "public_key": "Rq1yTwgKVKyaRJ3W7QUFAVvt7tQ0m3ETQ5mXngNaLm4=",
+        "registered_at": "2026-04-28T00:00:00Z",
+        "retired_at": "2026-08-22T14:50:00Z",
+        "status": "verify_only"
+      },
+      {
+        "algorithm": "ed25519",
+        "key_id": "ed25519_primary_v2",
+        "note": "Signs every record from the 2026-08-22 cutover onward. Generated on the host directly into a 0600 root-only file by a process that set umask 0077 and used O_CREAT|O_EXCL, then moved into /etc/aegis/api.env (0600 root:root) and loaded via EnvironmentFile= \u2014 never Environment=, which systemd discloses over D-Bus to every local account and which is how v1 was exposed. The private half has never been in git, in a command argument, in shell history, in a log, or in a report.",
+        "public_key": "KTwKiK6dvfU6+p6v2uWbUsSD6ALlSkzW07RSk76JFzo=",
+        "registered_at": "2026-08-22T14:50:00Z",
+        "retired_at": null,
+        "status": "active_signing"
+      }
+    ],
+    "note": "Every Ed25519 key these records may be signed under. Select by the key_id on the record's signature bundle. A key with status verify_only no longer signs and never will again; it remains valid for the records it signed."
+  }
+}

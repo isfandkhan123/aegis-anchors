@@ -1,0 +1,204 @@
+{
+  "proof_format": "aegis_decision_proof_v1",
+  "exported_note": "self-contained; verify with scripts/verify_decision_proof.py, no network needed",
+  "decision_id": "51bb45c0-ef3e-4934-acd3-6cb56402792a",
+  "event_hash": "14503415dcb3b6f0bd1d62e2b532e87a9234d9073548308eba97c6fd67488243",
+  "decision": {
+    "org_id": "00000000-0000-0000-0000-000000000001",
+    "run_id": "3abcce8a-b4f2-4e9c-ab84-83b99dfb5aae",
+    "seq": 400,
+    "action_type": "ops_adapter",
+    "tool_name": "ops_adapter.unknown",
+    "payload": "{\"schema_version\": \"decision_envelope_v2\", \"decision_id\": \"1e4c30a7-73b7-447c-86f7-b1d87733c950\", \"trace_id\": \"c0dac6790262a3382d3876fae478724b4fc9d4dc81f88788442e8c0913ef649a\", \"org_id\": \"00000000-0000-0000-0000-000000000001\", \"agent_id\": \"unknown\", \"adapter\": \"ops_adapter\", \"adapter_version\": \"unknown\", \"adapter_fingerprint\": \"c062c5ee27eb76426c94175ecb60f0039fddad6478c65ed7f25b903f0f1c3d88\", \"policy_version\": \"ops_yaml_v1\", \"policy_hash\": null, \"eval_tier\": null, \"action\": \"check_service\", \"action_type\": \"unknown\", \"target\": \"aegis\", \"risk_level\": \"LOW\", \"confidence\": 0.9, \"governed_decision\": \"APPROVE\", \"required_approval\": true, \"reasons\": [\"STANDARD_GOVERNANCE\"], \"context\": {\"request_id\": \"1e4c30a7-73b7-447c-86f7-b1d87733c950\", \"trace_id\": \"c0dac6790262a3382d3876fae478724b4fc9d4dc81f88788442e8c0913ef649a\", \"org_id\": \"00000000-0000-0000-0000-000000000001\", \"adapter\": \"ops_adapter\", \"schema_version\": \"govern_action_v1\", \"idempotency_key\": null, \"ingress_source\": \"govern_api\", \"ingress_version\": \"f14_v1\", \"requested_at\": \"2026-08-25T15:31:24.585635+00:00\", \"policy_commitment\": {\"policy_commitment_version\": \"polcommit_v1\", \"policy_set_hash\": \"5689dee2f0fe3b74fec0c1aed94bac0e9349e10ab99c980df49e9fc97e2baab1\", \"policy_version\": \"ops_yaml_v1\", \"policy_set_id\": \"ops_adapter:ops_yaml_v1\", \"adapter\": \"ops_adapter\"}}, \"intent_hash\": \"bc894263d4f1157fa30013cb8e93e63522a69d0b2875b7c46965a45d6a7b3695\", \"source_decision_hash\": \"fc7223cdb6eae0f0f3a3f9da2deba47b713c42b8ecc522ca2de809ef3d9af4cc\", \"decision_locked_at\": \"2026-08-25T15:31:24.634073+00:00\", \"timestamp\": \"2026-08-25T15:31:24.585635+00:00\", \"envelope_hash\": \"9ab868c6b8e05298543588e12a6b35fe7cb29d3e1032c3d9aeae63cee43bc6e1\", \"signature\": {\"ok\": true, \"signature_version\": \"sig2_v1\", \"algorithm\": \"ed25519\", \"signer_type\": \"aegis_ed25519_v1\", \"key_id\": \"ed25519_primary_v2\", \"signed_at\": \"2026-08-25T15:31:24.634293+00:00\", \"decision_id\": \"1e4c30a7-73b7-447c-86f7-b1d87733c950\", \"envelope_hash\": \"9ab868c6b8e05298543588e12a6b35fe7cb29d3e1032c3d9aeae63cee43bc6e1\", \"signature\": \"N2op7czQYZyYGUOcX06D9XusmtrQhA2exvscvrEo7A8l0yMDS4aY9jXRwgDpGAXiUoE1pQi4OAruSBg7MV5JDw==\", \"public_key\": \"KTwKiK6dvfU6+p6v2uWbUsSD6ALlSkzW07RSk76JFzo=\", \"org_id\": \"00000000-0000-0000-0000-000000000001\"}, \"policy_registration_status\": \"POLICY_SET_COMMITMENT\", \"signature_status\": \"SIGNED\", \"provenance\": {\"ledger_client_version\": \"lc1_v2\", \"enriched_at\": \"2026-08-25T15:31:24.634309+00:00\"}, \"canonical_envelope\": true, \"validation_status\": \"VALID\"}",
+    "policy_decision": "allow",
+    "policy_reason": "agent_governed_verdict_v2",
+    "status": "approved",
+    "prev_hash": "7629c9cc15da39a98a14f9cd641d6fe3dd8c99dcd0e68adc1bb682f69f5fd71a"
+  },
+  "decision_envelope": {
+    "schema_version": "decision_envelope_v2",
+    "decision_id": "1e4c30a7-73b7-447c-86f7-b1d87733c950",
+    "trace_id": "c0dac6790262a3382d3876fae478724b4fc9d4dc81f88788442e8c0913ef649a",
+    "org_id": "00000000-0000-0000-0000-000000000001",
+    "agent_id": "unknown",
+    "adapter": "ops_adapter",
+    "adapter_version": "unknown",
+    "adapter_fingerprint": "c062c5ee27eb76426c94175ecb60f0039fddad6478c65ed7f25b903f0f1c3d88",
+    "policy_version": "ops_yaml_v1",
+    "policy_hash": null,
+    "eval_tier": null,
+    "action": "check_service",
+    "action_type": "unknown",
+    "target": "aegis",
+    "risk_level": "LOW",
+    "confidence": 0.9,
+    "governed_decision": "APPROVE",
+    "required_approval": true,
+    "reasons": [
+      "STANDARD_GOVERNANCE"
+    ],
+    "context": {
+      "request_id": "1e4c30a7-73b7-447c-86f7-b1d87733c950",
+      "trace_id": "c0dac6790262a3382d3876fae478724b4fc9d4dc81f88788442e8c0913ef649a",
+      "org_id": "00000000-0000-0000-0000-000000000001",
+      "adapter": "ops_adapter",
+      "schema_version": "govern_action_v1",
+      "idempotency_key": null,
+      "ingress_source": "govern_api",
+      "ingress_version": "f14_v1",
+      "requested_at": "2026-08-25T15:31:24.585635+00:00",
+      "policy_commitment": {
+        "policy_commitment_version": "polcommit_v1",
+        "policy_set_hash": "5689dee2f0fe3b74fec0c1aed94bac0e9349e10ab99c980df49e9fc97e2baab1",
+        "policy_version": "ops_yaml_v1",
+        "policy_set_id": "ops_adapter:ops_yaml_v1",
+        "adapter": "ops_adapter"
+      }
+    },
+    "intent_hash": "bc894263d4f1157fa30013cb8e93e63522a69d0b2875b7c46965a45d6a7b3695",
+    "source_decision_hash": "fc7223cdb6eae0f0f3a3f9da2deba47b713c42b8ecc522ca2de809ef3d9af4cc",
+    "decision_locked_at": "2026-08-25T15:31:24.634073+00:00",
+    "timestamp": "2026-08-25T15:31:24.585635+00:00",
+    "envelope_hash": "9ab868c6b8e05298543588e12a6b35fe7cb29d3e1032c3d9aeae63cee43bc6e1",
+    "signature": {
+      "ok": true,
+      "signature_version": "sig2_v1",
+      "algorithm": "ed25519",
+      "signer_type": "aegis_ed25519_v1",
+      "key_id": "ed25519_primary_v2",
+      "signed_at": "2026-08-25T15:31:24.634293+00:00",
+      "decision_id": "1e4c30a7-73b7-447c-86f7-b1d87733c950",
+      "envelope_hash": "9ab868c6b8e05298543588e12a6b35fe7cb29d3e1032c3d9aeae63cee43bc6e1",
+      "signature": "N2op7czQYZyYGUOcX06D9XusmtrQhA2exvscvrEo7A8l0yMDS4aY9jXRwgDpGAXiUoE1pQi4OAruSBg7MV5JDw==",
+      "public_key": "KTwKiK6dvfU6+p6v2uWbUsSD6ALlSkzW07RSk76JFzo=",
+      "org_id": "00000000-0000-0000-0000-000000000001"
+    },
+    "policy_registration_status": "POLICY_SET_COMMITMENT",
+    "signature_status": "SIGNED",
+    "provenance": {
+      "ledger_client_version": "lc1_v2",
+      "enriched_at": "2026-08-25T15:31:24.634309+00:00"
+    },
+    "canonical_envelope": true,
+    "validation_status": "VALID"
+  },
+  "signature": {
+    "ok": true,
+    "key_id": "ed25519_primary_v2",
+    "org_id": "00000000-0000-0000-0000-000000000001",
+    "algorithm": "ed25519",
+    "signature": "N2op7czQYZyYGUOcX06D9XusmtrQhA2exvscvrEo7A8l0yMDS4aY9jXRwgDpGAXiUoE1pQi4OAruSBg7MV5JDw==",
+    "signed_at": "2026-08-25T15:31:24.634293+00:00",
+    "public_key": "KTwKiK6dvfU6+p6v2uWbUsSD6ALlSkzW07RSk76JFzo=",
+    "decision_id": "1e4c30a7-73b7-447c-86f7-b1d87733c950",
+    "signer_type": "aegis_ed25519_v1",
+    "envelope_hash": "9ab868c6b8e05298543588e12a6b35fe7cb29d3e1032c3d9aeae63cee43bc6e1",
+    "signature_version": "sig2_v1"
+  },
+  "inclusion": {
+    "proof_version": "merkle_incl_v1",
+    "leaf_index": 21160,
+    "leaf_count": 22023,
+    "event_hash": "14503415dcb3b6f0bd1d62e2b532e87a9234d9073548308eba97c6fd67488243",
+    "merkle_path": [
+      {
+        "sibling": "9e093a60e14edcb455e34f1dbb271864dc1679113cf8134859c326a17f6696a0",
+        "position": "right"
+      },
+      {
+        "sibling": "a441bf688606dc1d7b5c50382a947318d96a718f2649e3fd602c35f2e94c38f3",
+        "position": "right"
+      },
+      {
+        "sibling": "d84a7e090958f8b221aaefa92c6fca9eacf1b49ebed0a53232741c300ed6b9c3",
+        "position": "right"
+      },
+      {
+        "sibling": "52a37717011869c79422c6457b4d1b2b739291d05fad0d966a3d4ec84e977373",
+        "position": "left"
+      },
+      {
+        "sibling": "d65be2c3fd611f05addabaac23469e21da4a783a160c635d48a705353b44cf19",
+        "position": "right"
+      },
+      {
+        "sibling": "05e03223c8477fac18ad35595874bb584a262b38daeb4d39d6ffe1fff1c8fe24",
+        "position": "left"
+      },
+      {
+        "sibling": "f236eb3a09416ddfb56b6936e448cef350ebcada599a51a9594ee692b4135dae",
+        "position": "right"
+      },
+      {
+        "sibling": "97ed0d3a1dafbd2bf33adad97c7061e42d3f62525f4b3b8ab553f40f604c5a5b",
+        "position": "left"
+      },
+      {
+        "sibling": "37580ce0d2412cb39ef33065ddc4d01fb06fdb32470d5cde68938a6433386466",
+        "position": "right"
+      },
+      {
+        "sibling": "7417552dab53dceb5076193599556b02192b2fabb9a8faafe471d9c42c51170b",
+        "position": "left"
+      },
+      {
+        "sibling": "7604a2a7ae484005ba5c547a0777341fb1e4f9a88bfa6e92161c9e60d143c9f1",
+        "position": "right"
+      },
+      {
+        "sibling": "ab129ecb8b5b09844fe778b1e9594d3c8ac0772864d69b8c32bccee5955afcee",
+        "position": "right"
+      },
+      {
+        "sibling": "76de87f6376ae59cf409039fe70876c53f10681e14c346a8a59f428e1a3521fe",
+        "position": "left"
+      },
+      {
+        "sibling": "99b2c85a575a8c921385a9febdfc297e37d7ff623f9ff150ebae0b4c6f85c6a2",
+        "position": "right"
+      },
+      {
+        "sibling": "8a9e6d0282db82cd55c317d1632709ddf0c02a609b4a9f7f5ba38ceb5f564b51",
+        "position": "left"
+      }
+    ],
+    "root_hash": "7b40cc5b6e28c70fb2aeb5607b8f447797b4321a7578029c97d907056cd02db4",
+    "algorithm": "sha256",
+    "pairing": "hex_string"
+  },
+  "checkpoint": {
+    "checkpoint_id": "5805cf79-750d-45f7-accb-c028b9736581",
+    "root_hash": "7b40cc5b6e28c70fb2aeb5607b8f447797b4321a7578029c97d907056cd02db4",
+    "date": "2026-08-25",
+    "total_actions": 22023
+  },
+  "anchor": {
+    "release_tag": "anchor-5805cf79-750d-45f7-accb-c028b9736581-2026-08-25",
+    "anchor_json_b64": "ewogICJjaGVja3BvaW50X3Jvb3QiOiAiN2I0MGNjNWI2ZTI4YzcwZmIyYWViNTYwN2I4ZjQ0Nzc5N2I0MzIxYTc1NzgwMjljOTdkOTA3MDU2Y2QwMmRiNCIsCiAgImNoZWNrcG9pbnRfaWQiOiAiNTgwNWNmNzktNzUwZC00NWY3LWFjY2ItYzAyOGI5NzM2NTgxIiwKICAiZ2VuZXJhdGVkX2F0IjogIjIwMjYtMDgtMjVUMTU6MzM6MTIuNjc2NTYzKzAwOjAwIiwKICAib3JnX2lkIjogIjAwMDAwMDAwLTAwMDAtMDAwMC0wMDAwLTAwMDAwMDAwMDAwMSIsCiAgImFuY2hvcmVkX2FydGlmYWN0IjogImxlZGdlcl9hY3Rpb25fY2hhaW4iLAogICJzY29wZSI6ICJnbG9iYWxfYWxsX29yZ3MiLAogICJ0b3RhbF9hY3Rpb25zIjogMjIwMjMsCiAgInRvdGFsX3J1bnMiOiAxNzYzOCwKICAidmVyaWZpY2F0aW9uIjogewogICAgInRvdGFsX2xlYXZlcyI6IDIyMDIzLAogICAgInZlcmlmaWVkX2VkMjU1MTkiOiAyMTY1OSwKICAgICJsZWdhY3lfaG1hY191bnZlcmlmaWFibGUiOiAzMjAsCiAgICAidW5zaWduZWQiOiA0MSwKICAgICJsZWdhY3lfdW5oYXNoYWJsZSI6IDIsCiAgICAic2lnbmF0dXJlX2JyZWFrZG93biI6IHsKICAgICAgInVuc2lnbmVkIjogNDEsCiAgICAgICJlZDI1NTE5X3ZhbGlkIjogMjE2NTksCiAgICAgICJzaWcxX2htYWNfdW52ZXJpZmlhYmxlIjogMzIwLAogICAgICAiYmFkX2J1bmRsZSI6IDEKICAgIH0KICB9LAogICJyZWNvdmVyeSI6IG51bGwsCiAgImF0dHJpYnV0aW9uIjogewogICAgIm9rX3N0cmljdCI6IGZhbHNlLAogICAgIm9rIjogdHJ1ZSwKICAgICJhdHRyaWJ1dGFibGVfZWQyNTUxOSI6IDIxNjU5LAogICAgInVuYXR0cmlidXRhYmxlX3RvdGFsIjogMSwKICAgICJ1bmF0dHJpYnV0YWJsZV9leGN1c2VkIjogMSwKICAgICJ1bmF0dHJpYnV0YWJsZV9ibG9ja2luZyI6IDAsCiAgICAibWFsZm9ybWVkX3NpZ25hdHVyZSI6IDEsCiAgICAiZWQyNTUxOV9pbnZhbGlkIjogMCwKICAgICJlZDI1NTE5X3Vua25vd25fa2V5IjogMCwKICAgICJlZDI1NTE5X2tleV9taXNtYXRjaCI6IDAsCiAgICAiZWQyNTUxOV9ub19yZWdpc3RyeSI6IDAsCiAgICAiZGVjbGFyZWRfdW5zaWduZWQiOiA0MSwKICAgICJkZWNsYXJlZF9obWFjX3VudmVyaWZpYWJsZSI6IDMyMAogIH0sCiAgInZlcmlmaWNhdGlvbl9leGNlcHRpb25zIjogewogICAgImNvdW50IjogMSwKICAgICJleGN1c2FibGVfY2xhc3NpZmljYXRpb25zIjogWwogICAgICAiYmFkX2J1bmRsZSIKICAgIF0sCiAgICAic291cmNlIjogIi9hcHAvYXBwcy9hcGkvdmVyaWZpY2F0aW9uX2V4Y2VwdGlvbnMuanNvbiIsCiAgICAiYXBwbGllZCI6IFsKICAgICAgewogICAgICAgICJhY3Rpb25faWQiOiAiN2JiOWI0YjItN2I4Zi00OTc1LTg1NTQtNGU3YjA2MTcxODYwIiwKICAgICAgICAiY2xhc3NpZmljYXRpb24iOiAiYmFkX2J1bmRsZSIsCiAgICAgICAgInJlYXNvbiI6ICJvcGVyYXRvciBkZXBsb3ltZW50IGRpYWdub3N0aWMsIDIwMjYtMDgtMjJUMTQ6NTA6MTlaOiBhIGZpZWxkLWJpc2VjdGlvbiBwcm9iZSBvZiAvYWN0aW9ucy9wcm9wb3NlIGFwcGVuZGVkIHRoaXMgcm93IHdpdGggc2lnbmF0dXJlPXtcIm9rXCI6IHRydWV9LiBJdCBpcyBtYWxmb3JtZWQgYW5kIGNsYXNzaWZpZXMgbWFsZm9ybWVkIHBlcm1hbmVudGx5LiBUaGUgbGVkZ2VyIGlzIGFwcGVuZC1vbmx5IHNvIGl0IGNhbm5vdCBiZSByZW1vdmVkOyB0aGUgdmVyaWZpZXIgd2FzIE5PVCBhZGp1c3RlZCB0byBhY2NvbW1vZGF0ZSBpdC4iLAogICAgICAgICJyZWNvcmRlZF9ieSI6ICJkYTdhZGNlYy0zMTJlLTQ1ODctOWE5MC0wNzE5NDNhNDRiNTUiLAogICAgICAgICJncmFudGVkX2F0IjogIjIwMjYtMDgtMjJUMTU6MjA6MDBaIgogICAgICB9CiAgICBdLAogICAgIm5vdGUiOiAiRWFjaCBlbnRyeSBuYW1lcyBPTkUgYWN0aW9uIGlkIGFuZCB0aGUgZXhhY3QgY2xhc3NpZmljYXRpb24gaXQgaXMgZXhjdXNlZCBmb3IuIEFuIGV4Y2VwdGlvbiBuZXZlciBtYWtlcyBhIHJlY29yZCB2YWxpZCBhbmQgY2FuIG5ldmVyIGV4Y3VzZSBhIGNyeXB0b2dyYXBoaWMgZmFpbHVyZSBcdTIwMTQgaXQgcmVjb3JkcyB0aGF0IGEgbWFsZm9ybWVkIHJlY29yZCBpcyBrbm93biwgZXhwbGFpbmVkLCBhbmQgbm90IHBlcm1pdHRlZCB0byBzdG9wIHRoZSByZXN0IG9mIHRoZSBjaGFpbiBiZWluZyBhbmNob3JlZC4iCiAgfSwKICAicHJldmlvdXNfYW5jaG9yX2NvbW1pdCI6IG51bGwsCiAgInByZXZpb3VzX2NoZWNrcG9pbnRfcm9vdCI6IG51bGwsCiAgInJlbGVhc2VfdGFnIjogImFuY2hvci01ODA1Y2Y3OS03NTBkLTQ1ZjctYWNjYi1jMDI4Yjk3MzY1ODEtMjAyNi0wOC0yNSIsCiAgInByb29mX3ZlcnNpb24iOiAicHJvb2YxX3YxIiwKICAic2lnbmF0dXJlX3ZlcnNpb24iOiAic2lnMl92MSIsCiAgImFuY2hvcmluZ192ZXJzaW9uIjogImFuY2hvcl92MSIsCiAgIm1hbmlmZXN0X3ZlcnNpb24iOiAiYW5jaG9yX21hbmlmZXN0X3YxIgp9",
+    "anchor_sig_b64": "jJvFNPbMfP0zwhUtH60HQDppQ6xKlpVnoFj0zWuvJ5QNpCh1c0HDb3lD+Jdl2dChbZwCmn7jYbhrV/pIvgmABA==",
+    "anchor_public_key_pem": "-----BEGIN PUBLIC KEY-----\nMCowBQYDK2VwAyEAKTwKiK6dvfU6+p6v2uWbUsSD6ALlSkzW07RSk76JFzo=\n-----END PUBLIC KEY-----\n"
+  },
+  "verification_keys": {
+    "keys": [
+      {
+        "algorithm": "ed25519",
+        "key_id": "ed25519_primary_v1",
+        "note": "Signs every record up to the 2026-08-22 cutover. Its private half was readable by every local account on the host from at least 2026-05-11 (a mode-644 systemd drop-in plus systemd's D-Bus disclosure of Environment=). No evidence of compromise exists and none could \u2014 a D-Bus read leaves no trace. Records signed under this key are ATTESTED but, for the exposure window, are NOT EXCLUSIVELY ATTRIBUTABLE to the API: the signature proves the key was used, not who used it. Retired from SIGNING at the 2026-08-22 cutover; permanently valid for VERIFICATION of the 20,292 records it signed.",
+        "public_key": "Rq1yTwgKVKyaRJ3W7QUFAVvt7tQ0m3ETQ5mXngNaLm4=",
+        "registered_at": "2026-04-28T00:00:00Z",
+        "retired_at": "2026-08-22T14:50:00Z",
+        "status": "verify_only"
+      },
+      {
+        "algorithm": "ed25519",
+        "key_id": "ed25519_primary_v2",
+        "note": "Signs every record from the 2026-08-22 cutover onward. Generated on the host directly into a 0600 root-only file by a process that set umask 0077 and used O_CREAT|O_EXCL, then moved into /etc/aegis/api.env (0600 root:root) and loaded via EnvironmentFile= \u2014 never Environment=, which systemd discloses over D-Bus to every local account and which is how v1 was exposed. The private half has never been in git, in a command argument, in shell history, in a log, or in a report.",
+        "public_key": "KTwKiK6dvfU6+p6v2uWbUsSD6ALlSkzW07RSk76JFzo=",
+        "registered_at": "2026-08-22T14:50:00Z",
+        "retired_at": null,
+        "status": "active_signing"
+      }
+    ],
+    "note": "Every Ed25519 key these records may be signed under. Select by the key_id on the record's signature bundle. A key with status verify_only no longer signs and never will again; it remains valid for the records it signed."
+  }
+}
