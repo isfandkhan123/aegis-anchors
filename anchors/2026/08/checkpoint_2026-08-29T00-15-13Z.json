@@ -1,0 +1,63 @@
+{
+  "checkpoint_root": "c4521a665bc23a4765ecc04f8894283feaa0378a2c5c1804560cbe7654047f50",
+  "checkpoint_id": "7ae5b9af-bde3-4287-8f26-c3dde21eba5b",
+  "generated_at": "2026-08-29T00:15:13.763818+00:00",
+  "org_id": "00000000-0000-0000-0000-000000000001",
+  "anchored_artifact": "ledger_action_chain",
+  "scope": "global_all_orgs",
+  "total_actions": 24693,
+  "total_runs": 17642,
+  "verification": {
+    "total_leaves": 24693,
+    "verified_ed25519": 24329,
+    "legacy_hmac_unverifiable": 320,
+    "unsigned": 41,
+    "legacy_unhashable": 2,
+    "signature_breakdown": {
+      "unsigned": 41,
+      "ed25519_valid": 24329,
+      "sig1_hmac_unverifiable": 320,
+      "bad_bundle": 1
+    }
+  },
+  "recovery": null,
+  "attribution": {
+    "ok_strict": false,
+    "ok": true,
+    "attributable_ed25519": 24329,
+    "unattributable_total": 1,
+    "unattributable_excused": 1,
+    "unattributable_blocking": 0,
+    "malformed_signature": 1,
+    "ed25519_invalid": 0,
+    "ed25519_unknown_key": 0,
+    "ed25519_key_mismatch": 0,
+    "ed25519_no_registry": 0,
+    "declared_unsigned": 41,
+    "declared_hmac_unverifiable": 320
+  },
+  "verification_exceptions": {
+    "count": 1,
+    "excusable_classifications": [
+      "bad_bundle"
+    ],
+    "source": "/app/apps/api/verification_exceptions.json",
+    "applied": [
+      {
+        "action_id": "7bb9b4b2-7b8f-4975-8554-4e7b06171860",
+        "classification": "bad_bundle",
+        "reason": "operator deployment diagnostic, 2026-08-22T14:50:19Z: a field-bisection probe of /actions/propose appended this row with signature={\"ok\": true}. It is malformed and classifies malformed permanently. The ledger is append-only so it cannot be removed; the verifier was NOT adjusted to accommodate it.",
+        "recorded_by": "da7adcec-312e-4587-9a90-071943a44b55",
+        "granted_at": "2026-08-22T15:20:00Z"
+      }
+    ],
+    "note": "Each entry names ONE action id and the exact classification it is excused for. An exception never makes a record valid and can never excuse a cryptographic failure \u2014 it records that a malformed record is known, explained, and not permitted to stop the rest of the chain being anchored."
+  },
+  "previous_anchor_commit": null,
+  "previous_checkpoint_root": null,
+  "release_tag": "anchor-7ae5b9af-bde3-4287-8f26-c3dde21eba5b-2026-08-29",
+  "proof_version": "proof1_v1",
+  "signature_version": "sig2_v1",
+  "anchoring_version": "anchor_v1",
+  "manifest_version": "anchor_manifest_v1"
+}
