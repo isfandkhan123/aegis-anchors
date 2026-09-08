@@ -4,7 +4,7 @@ This repository is the **public commitment surface** for the Aegis governance le
 
 1. **Anchor releases** — each GitHub Release carries a signed `anchor.json` committing a Merkle **checkpoint root** over the ledger's governed-decision chain, plus its Ed25519 signature (`anchor.sig`), the signing public key (`public.key`), and the full verification-key registry (`verification_keys.json`).
 2. **Portable decision proofs** (`proofs/aegis_decision_proof_v1__*.json`) — self-contained bundles that let anyone independently verify that **one specific governed decision** is included in a publicly anchored, immutable checkpoint, with **no access to Aegis, its database, its network, or any private key**.
-3. **A governed-look proof** (`proofs/aegis_governed_look_proof_v1__*.json`) — a self-contained bundle of the **four linked records** of one governed scientific action (two refusals, a grant, a consumption). It is **deliberately unanchored** — see [Anchoring status](#anchoring-status) — and the verifier says so on every run.
+3. **A governed-look proof** (`proofs/aegis_governed_look_proof_v1__*.json`) - a self-contained bundle of the **four linked records** of one governed scientific action (two refusals, a grant, a consumption). It is **deliberately unanchored** — see [Anchoring status](#anchoring-status) — and the verifier says so on every run.
 
 > **Anchoring status: HALTED since 2026-09-01.** Records written after the last public anchor are signed and hash-linked but not publicly anchored. [Why, and what that means.](#anchoring-status)
 
