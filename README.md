@@ -1,9 +1,12 @@
 # aegis-anchors — public governance anchors & portable decision proofs
 
-This repository is the **public commitment surface** for the Aegis governance ledger. It holds two kinds of artifact:
+This repository is the **public commitment surface** for the Aegis governance ledger. It holds three kinds of artifact:
 
 1. **Anchor releases** — each GitHub Release carries a signed `anchor.json` committing a Merkle **checkpoint root** over the ledger's governed-decision chain, plus its Ed25519 signature (`anchor.sig`), the signing public key (`public.key`), and the full verification-key registry (`verification_keys.json`).
-2. **Portable decision proofs** (`proofs/*.json`) — self-contained bundles that let anyone independently verify that **one specific governed decision** is included in a publicly anchored, immutable checkpoint, with **no access to Aegis, its database, its network, or any private key**.
+2. **Portable decision proofs** (`proofs/aegis_decision_proof_v1__*.json`) — self-contained bundles that let anyone independently verify that **one specific governed decision** is included in a publicly anchored, immutable checkpoint, with **no access to Aegis, its database, its network, or any private key**.
+3. **A governed-look proof** (`proofs/aegis_governed_look_proof_v1__*.json`) — a self-contained bundle of the **four linked records** of one governed scientific action (two refusals, a grant, a consumption). It is **deliberately unanchored** — see [Anchoring status](#anchoring-status) — and the verifier says so on every run.
+
+> **Anchoring status: HALTED since 2026-09-01.** Records written after the last public anchor are signed and hash-linked but not publicly anchored. [Why, and what that means.](#anchoring-status)
 
 > Anchoring makes later alteration or deletion of these records **detectable, not impossible**. What is published here is what a stranger can check.
 
@@ -19,13 +22,18 @@ mkdir aegis-verify && cd aegis-verify
 curl -sO https://raw.githubusercontent.com/isfandkhan123/aegis-anchors/main/verify_decision_proof.py
 python3 -m pip install --quiet cryptography
 
-# 3. the two published proof fixtures
+# 3. the two published decision-proof fixtures
 curl -sO https://raw.githubusercontent.com/isfandkhan123/aegis-anchors/main/proofs/aegis_decision_proof_v1__aea76ef5.json
 curl -sO https://raw.githubusercontent.com/isfandkhan123/aegis-anchors/main/proofs/aegis_decision_proof_v1__51bb45c0.json
 
 # 4. verify — each prints its layers and exits 0 on STRICT VERIFICATION PASS
 python3 verify_decision_proof.py aegis_decision_proof_v1__aea76ef5.json
 python3 verify_decision_proof.py aegis_decision_proof_v1__51bb45c0.json
+
+# 5. the governed-look bundle (four linked records, UNANCHORED — exits 0 on
+#    SIGNED-AND-LINKED VERIFICATION PASS and prints PUBLIC ANCHORING NOT ESTABLISHED)
+curl -sO https://raw.githubusercontent.com/isfandkhan123/aegis-anchors/main/proofs/aegis_governed_look_proof_v1__q2-m2-v2-run.json
+python3 verify_decision_proof.py aegis_governed_look_proof_v1__q2-m2-v2-run.json
 ```
 
 Each bundle is **self-contained**: it embeds the decision, its signature, the Merkle inclusion path, the checkpoint, and the anchor artifacts (`anchor.json`, `anchor.sig`, `public.key`, `verification_keys.json`) — so the verifier needs nothing else. The same anchor artifacts are independently published as assets on the anchor release named inside each bundle (`anchor.release_tag`), if you wish to cross-check.
@@ -71,6 +79,63 @@ python3 verify_decision_proof.py aegis_decision_proof_v1__51bb45c0.json --policy
 | **V2** | `proofs/aegis_decision_proof_v1__51bb45c0.json` | `decision_envelope_v2` | `ed25519_primary_v2` (active) | `POLICY SET COMMITMENT` — the complete ordered effective policy set |
 
 Both are real governed decisions (benign operational/dev checks), both are leaves in the immutable checkpoint `5805cf79-750d-45f7-accb-c028b9736581` (root `7b40cc5b…`), anchored at release `anchor-5805cf79-750d-45f7-accb-c028b9736581-2026-08-25`.
+
+### The governed-look bundle (unanchored)
+
+| | fixture | schema | signing key | what it establishes |
+|---|---|---|---|---|
+| **LOOK** | `proofs/aegis_governed_look_proof_v1__q2-m2-v2-run.json` (+ `.manifest.json`) | `aegis_governed_look_proof_v1` | `ed25519_primary_v2` (active) | four records **signed, linked and consistent**; **no public anchor** |
+
+The four records are the spine of the first governed scientific look, described in plain language in [`FIRST_GOVERNED_LOOK.md`](https://github.com/isfandkhan123/new-alpha-trade-bot/blob/research-baseline-passA/research/eve_runs/q2-m2-v2-run/FIRST_GOVERNED_LOOK.md) (private repository; the bundle here is self-contained and does not need it):
+
+| seq | record id | what it is |
+|---|---|---|
+| 989 | `d7e991e8-b655-47f2-87d6-e275c40fc4c7` | **REFUSED** — presented spec hash `74e30779…` ≠ registered `2c50ef57…` |
+| 990 | `ed01b462-6caf-4174-a925-af5c0f841d58` | **REFUSED** — same request, same answer |
+| 992 | `66222a25-7a82-490c-8417-bb686d20c38e` | **ALLOW** — look `AVAILABLE → RESERVED`, execution `exec_d03e90cc…` |
+| 993 | `d323193c-8a6f-40e5-8452-868d5098ba6a` | **CONSUMED** — bound to result hash `f104069c…` |
+
+Record 991 sits between 990 and 992 and is not disclosed; the bundle declares that gap and the verifier fails if a gap is undeclared.
+
+What the verifier proves for this bundle, layer by layer:
+
+```
+RECORD HASH        each record's event_hash recomputes from its disclosed fields
+RECORD SIGNATURE   Ed25519 over decision_id|envelope_hash, key resolved by key_id from the registry
+REGISTERED KEY     that key_id is in the published registry (active_signing or verify_only)
+CHAIN LINKAGE      990.prev_hash == 989.event_hash and 993.prev_hash == 992.event_hash; no undeclared gap
+LOOK CONSISTENCY   the four records agree with each other on experiment, registered spec hash,
+                   dataset content hash, look-key hash, execution id and result hash; the two
+                   refusals present a DIFFERENT spec hash from the registered one; state ends CONSUMED
+MANIFEST BINDING   the manifest names every record and identity, commits to the bundle body by
+                   hash, and its own hash recomputes
+MERKLE INCLUSION   NOT ESTABLISHED — no checkpoint snapshot contains these records
+PUBLIC ANCHOR      NOT ESTABLISHED — anchoring is halted (below)
+```
+
+and reports:
+
+```
+RECORD INTEGRITY                 the records and their links are sound
+LOOK CONSISTENCY                 the records tell one coherent story
+PUBLIC ANCHORING                 NOT ESTABLISHED — always, for this format
+SIGNED-AND-LINKED VERIFICATION   the first two, and the bundle honestly claims no anchor
+```
+
+**What this bundle does not prove.** That these four records are the *only* records for this look, or that the look was not spent elsewhere. That would need the checkpoint they sit in, its Merkle inclusion path, and a public anchor covering it — none of which exists while anchoring is halted. A bundle that claimed an anchor for these records would be rejected by the verifier, not accepted.
+
+---
+
+## Anchoring status
+
+**Public anchoring has been halted since 2026-09-01.** The last public anchor is release `anchor-ba7b3999-4d00-43a5-89be-4edb64f5118c-2026-09-01` (checkpoint root `67053839…`, 26,832 leaves, generated 2026-09-01T00:15:28Z). Every ledger record written after that point — including the four governed-look records above, written 2026-09-07 — is signed and hash-linked but **not covered by any public anchor**.
+
+Two independent reasons, both documented in the private operations repository and summarised here so the halt can be understood without it:
+
+1. **An unattributable record in the production ledger (2026-09-01).** A restart proof run with a development configuration wrote one real record into the production chain, signed with an ephemeral development key that no verification registry holds. The record classifies `ed25519_unknown_key`. The ledger is append-only, so it cannot be removed; the anchoring gate deliberately cannot excuse a cryptographic failure; and every remedy (register the dev key, widen the excusable set) would weaken the guarantee an anchor makes. The verified-checkpoint endpoint therefore refuses to emit a root, and no anchor has been published since. The hash chain itself remained intact throughout — this is an **attribution** failure, not a chain-integrity failure, and the two are not the same property.
+2. **Exception-cache authority is `DESIGN_REQUIRED`.** An anchor manifest publishes which records were excused from blocking the gate and cites the governed decision that authorised each exception. Nothing currently checks that citation mechanically: the exception file is, in practice, the authority, and the decision is documentation. That is tolerable while nothing is being asserted to anyone; it is not tolerable the moment an anchor is published. Anchoring does not resume until an exception is applied *only when* it corresponds to its governed authority, or an equivalent fail-closed design replaces it.
+
+This halt is the gate working, not the gate failing. It costs nothing to admit and would cost a great deal to paper over.
 
 ---
 
@@ -123,6 +188,8 @@ A portable decision proof discloses:
 
 A proof does **not** disclose any neighboring decision's payload, nor the governing policy rule tree.
 
+The governed-look bundle discloses more, deliberately: the four records' full signed payloads (agent id, research run id, request ids, experiment id, dataset id and content hash, execution id, result hash, timestamps), their ledger run id and sequence numbers, and the `event_hash` of the undisclosed record 991 by way of 992's `prev_hash`. It discloses no result content, no dataset content, no policy definition and no credential.
+
 ---
 
 ## Durability limitation (stated plainly)
@@ -137,7 +204,11 @@ Policy-definition recoverability is **not** claimed to be durable/redundant unti
 
 ## Tamper check (recommended)
 
-Copy a bundle, corrupt one field, and confirm the verifier rejects it:
+Copy a bundle, corrupt one field, and confirm the verifier rejects it.
+
+For the governed-look bundle these five were run from a clean environment before publication, each producing exit 1: alter one byte inside a signed record → `RECORD HASH FAIL`; alter an `event_hash` → `RECORD HASH FAIL` and `CHAIN LINKAGE FAIL`; flip one bit of a signature → `RECORD SIGNATURE FAIL`; swap the registered spec hash for the one the refusals presented → `LOOK CONSISTENCY FAIL`; remove record 990 → `CHAIN LINKAGE FAIL` and `MANIFEST BINDING FAIL`.
+
+For a decision proof:
 
 ```bash
 cp aegis_decision_proof_v1__51bb45c0.json tampered.json

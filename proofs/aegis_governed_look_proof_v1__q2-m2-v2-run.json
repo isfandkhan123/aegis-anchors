@@ -1,0 +1,356 @@
+{
+  "proof_format": "aegis_governed_look_proof_v1",
+  "exported_note": "self-contained; verify with verify_decision_proof.py, no network needed; UNANCHORED — see anchoring",
+  "source_note": "records are the bodies of GET /actions/{id} on the Aegis ledger, gathered read-only at 2026-09-07T21:55Z and persisted in research/eve_runs/q2-m2-v2-run/AEGIS_EVIDENCE.json; payload re-serialised with json.dumps, the ledger's own payload_str rule; key registry is the one published with anchor release anchor-5805cf79-750d-45f7-accb-c028b9736581-2026-08-25",
+  "subject": {
+    "kind": "research_look",
+    "agent_id": "agent:quant-research",
+    "run_id": "q2-m2-v2-run",
+    "research_family": "M2",
+    "experiment_id": "M2-BTC-ETH-CONVERGENCE-v2",
+    "registered_spec_hash": "2c50ef572a45cfcd2ce3dbd5e624908beae41359233ac49045de4945ffb01b9c",
+    "dataset_id": "depth_panel_c0_w2",
+    "dataset_classification": "DEVELOPMENT",
+    "dataset_content_hash": "118bb4ca073b6470a4f09414a518d25f8f84cec2b06c112146116f16759086aa",
+    "look_key_hash": "0efebda81c1d3a52252ad0297c9cdb0fd66120ba8ed8b6a4cbde83a2375145f3",
+    "request_id": "req_ecaab480205aa3956c94c4f3",
+    "execution_id": "exec_d03e90cc108b4191a61c31270e1cef3a",
+    "pre_run_state_hash": "dd7dea420530272290a6d4fd8019637752327f890039562398d5db22b1370403",
+    "reserved_at": "2026-09-07T21:49:43.222+00:00",
+    "consumed_at": "2026-09-07T21:49:56.022+00:00",
+    "result_hash": "f104069c37ce0c0341484d583db4e30a3c5aefaed978140fad88452f77801882",
+    "final_state": "CONSUMED"
+  },
+  "records": [
+    {
+      "role": "refusal",
+      "decision_id": "d7e991e8-b655-47f2-87d6-e275c40fc4c7",
+      "event_hash": "2ec3ac941d2a8332dd0de8e1d1708db3c2404b5cf8c2e4fdab15a4ee4986f439",
+      "recorded_at": "2026-09-07T21:46:30.139328",
+      "decision": {
+        "org_id": "00000000-0000-0000-0000-000000000001",
+        "run_id": "2f7bcd2a-1972-4453-857f-72b63918eab1",
+        "seq": 989,
+        "action_type": "RESEARCH_LOOK_TRANSITION",
+        "tool_name": null,
+        "payload": "{\"request_id\": \"req_cf94d013f61dbe5fbb6051c1\", \"agent_id\": \"agent:quant-research\", \"run_id\": \"q2-m2-v2-run\", \"experiment_id\": \"M2-BTC-ETH-CONVERGENCE-v2\", \"reasons\": [\"spec_hash_mismatch\"], \"requested\": {\"request_id\": \"req_cf94d013f61dbe5fbb6051c1\", \"agent_id\": \"agent:quant-research\", \"run_id\": \"q2-m2-v2-run\", \"experiment_id\": \"M2-BTC-ETH-CONVERGENCE-v2\", \"action\": \"EXECUTE_ONCE\", \"spec_hash\": \"74e30779cf83a6a8593446a189e20c09fcce4612db5b74bd4cd6f2cfde98b4f0\", \"dataset_id\": \"depth_panel_c0_w2\", \"dataset_classification\": \"DEVELOPMENT\", \"dataset_content_hash\": \"118bb4ca073b6470a4f09414a518d25f8f84cec2b06c112146116f16759086aa\", \"pre_run_state_hash\": \"dd7dea420530272290a6d4fd8019637752327f890039562398d5db22b1370403\"}, \"kind\": \"EXECUTE_FROZEN_EXPERIMENT.refused\", \"adapter\": \"research_looks\", \"policy_verdict\": \"BLOCK\", \"source\": \"research_looks_v1\", \"envelope_hash\": \"92ba9df73a5f6c4dad0921991d4a47e2e99df46fe7a6fdd60061ed75ce2e6049\"}",
+        "policy_decision": "block",
+        "policy_reason": "agent_governed_verdict_v2",
+        "status": "denied",
+        "prev_hash": "2395156b5f1578d1019e072da42b32511d4078566f459f08cb9155981422c224"
+      },
+      "decision_envelope": {
+        "request_id": "req_cf94d013f61dbe5fbb6051c1",
+        "agent_id": "agent:quant-research",
+        "run_id": "q2-m2-v2-run",
+        "experiment_id": "M2-BTC-ETH-CONVERGENCE-v2",
+        "reasons": [
+          "spec_hash_mismatch"
+        ],
+        "requested": {
+          "request_id": "req_cf94d013f61dbe5fbb6051c1",
+          "agent_id": "agent:quant-research",
+          "run_id": "q2-m2-v2-run",
+          "experiment_id": "M2-BTC-ETH-CONVERGENCE-v2",
+          "action": "EXECUTE_ONCE",
+          "spec_hash": "74e30779cf83a6a8593446a189e20c09fcce4612db5b74bd4cd6f2cfde98b4f0",
+          "dataset_id": "depth_panel_c0_w2",
+          "dataset_classification": "DEVELOPMENT",
+          "dataset_content_hash": "118bb4ca073b6470a4f09414a518d25f8f84cec2b06c112146116f16759086aa",
+          "pre_run_state_hash": "dd7dea420530272290a6d4fd8019637752327f890039562398d5db22b1370403"
+        },
+        "kind": "EXECUTE_FROZEN_EXPERIMENT.refused",
+        "adapter": "research_looks",
+        "policy_verdict": "BLOCK",
+        "source": "research_looks_v1",
+        "envelope_hash": "92ba9df73a5f6c4dad0921991d4a47e2e99df46fe7a6fdd60061ed75ce2e6049"
+      },
+      "signature": {
+        "ok": true,
+        "key_id": "ed25519_primary_v2",
+        "org_id": "00000000-0000-0000-0000-000000000001",
+        "algorithm": "ed25519",
+        "signature": "3Gjmz9NNZstTDEy54OaFcURsROdRvOH8B07U6JYlaWZ67/p7r1WzfWJSDZNkYdFoZ/ULGygr/gxW9189FAd6Dg==",
+        "signed_at": "2026-09-07T21:46:30.097044+00:00",
+        "public_key": "KTwKiK6dvfU6+p6v2uWbUsSD6ALlSkzW07RSk76JFzo=",
+        "decision_id": "81b7ce26-d959-467c-bdcb-4bf10b9a38ff",
+        "signer_type": "aegis_ed25519_v1",
+        "envelope_hash": "92ba9df73a5f6c4dad0921991d4a47e2e99df46fe7a6fdd60061ed75ce2e6049",
+        "signature_version": "sig2_v1"
+      }
+    },
+    {
+      "role": "refusal",
+      "decision_id": "ed01b462-6caf-4174-a925-af5c0f841d58",
+      "event_hash": "31f53c459dede4469615b6d84ac4febd67013d04d4c8b117d41cb57d6eb52841",
+      "recorded_at": "2026-09-07T21:46:37.618893",
+      "decision": {
+        "org_id": "00000000-0000-0000-0000-000000000001",
+        "run_id": "2f7bcd2a-1972-4453-857f-72b63918eab1",
+        "seq": 990,
+        "action_type": "RESEARCH_LOOK_TRANSITION",
+        "tool_name": null,
+        "payload": "{\"request_id\": \"req_cf94d013f61dbe5fbb6051c1\", \"agent_id\": \"agent:quant-research\", \"run_id\": \"q2-m2-v2-run\", \"experiment_id\": \"M2-BTC-ETH-CONVERGENCE-v2\", \"reasons\": [\"spec_hash_mismatch\"], \"requested\": {\"request_id\": \"req_cf94d013f61dbe5fbb6051c1\", \"agent_id\": \"agent:quant-research\", \"run_id\": \"q2-m2-v2-run\", \"experiment_id\": \"M2-BTC-ETH-CONVERGENCE-v2\", \"action\": \"EXECUTE_ONCE\", \"spec_hash\": \"74e30779cf83a6a8593446a189e20c09fcce4612db5b74bd4cd6f2cfde98b4f0\", \"dataset_id\": \"depth_panel_c0_w2\", \"dataset_classification\": \"DEVELOPMENT\", \"dataset_content_hash\": \"118bb4ca073b6470a4f09414a518d25f8f84cec2b06c112146116f16759086aa\", \"pre_run_state_hash\": \"dd7dea420530272290a6d4fd8019637752327f890039562398d5db22b1370403\"}, \"kind\": \"EXECUTE_FROZEN_EXPERIMENT.refused\", \"adapter\": \"research_looks\", \"policy_verdict\": \"BLOCK\", \"source\": \"research_looks_v1\", \"envelope_hash\": \"92ba9df73a5f6c4dad0921991d4a47e2e99df46fe7a6fdd60061ed75ce2e6049\"}",
+        "policy_decision": "block",
+        "policy_reason": "agent_governed_verdict_v2",
+        "status": "denied",
+        "prev_hash": "2ec3ac941d2a8332dd0de8e1d1708db3c2404b5cf8c2e4fdab15a4ee4986f439"
+      },
+      "decision_envelope": {
+        "request_id": "req_cf94d013f61dbe5fbb6051c1",
+        "agent_id": "agent:quant-research",
+        "run_id": "q2-m2-v2-run",
+        "experiment_id": "M2-BTC-ETH-CONVERGENCE-v2",
+        "reasons": [
+          "spec_hash_mismatch"
+        ],
+        "requested": {
+          "request_id": "req_cf94d013f61dbe5fbb6051c1",
+          "agent_id": "agent:quant-research",
+          "run_id": "q2-m2-v2-run",
+          "experiment_id": "M2-BTC-ETH-CONVERGENCE-v2",
+          "action": "EXECUTE_ONCE",
+          "spec_hash": "74e30779cf83a6a8593446a189e20c09fcce4612db5b74bd4cd6f2cfde98b4f0",
+          "dataset_id": "depth_panel_c0_w2",
+          "dataset_classification": "DEVELOPMENT",
+          "dataset_content_hash": "118bb4ca073b6470a4f09414a518d25f8f84cec2b06c112146116f16759086aa",
+          "pre_run_state_hash": "dd7dea420530272290a6d4fd8019637752327f890039562398d5db22b1370403"
+        },
+        "kind": "EXECUTE_FROZEN_EXPERIMENT.refused",
+        "adapter": "research_looks",
+        "policy_verdict": "BLOCK",
+        "source": "research_looks_v1",
+        "envelope_hash": "92ba9df73a5f6c4dad0921991d4a47e2e99df46fe7a6fdd60061ed75ce2e6049"
+      },
+      "signature": {
+        "ok": true,
+        "key_id": "ed25519_primary_v2",
+        "org_id": "00000000-0000-0000-0000-000000000001",
+        "algorithm": "ed25519",
+        "signature": "IOrf2xv2NktPLMMqSZpY8pT0bNm+HOKlmKPZrBURNy+DcTLlI/f4j/zpp13oBaEqf5HQBaXKI2QSivjm0kjEAg==",
+        "signed_at": "2026-09-07T21:46:37.582078+00:00",
+        "public_key": "KTwKiK6dvfU6+p6v2uWbUsSD6ALlSkzW07RSk76JFzo=",
+        "decision_id": "ba2ceb3c-3c36-4495-ab86-56fb3f6008c8",
+        "signer_type": "aegis_ed25519_v1",
+        "envelope_hash": "92ba9df73a5f6c4dad0921991d4a47e2e99df46fe7a6fdd60061ed75ce2e6049",
+        "signature_version": "sig2_v1"
+      }
+    },
+    {
+      "role": "grant",
+      "decision_id": "66222a25-7a82-490c-8417-bb686d20c38e",
+      "event_hash": "8f3f0109f4e2cc6eb8d3a4a125991e1115b1582c8581a9bc113920d74f87f7e1",
+      "recorded_at": "2026-09-07T21:49:43.263041",
+      "decision": {
+        "org_id": "00000000-0000-0000-0000-000000000001",
+        "run_id": "2f7bcd2a-1972-4453-857f-72b63918eab1",
+        "seq": 992,
+        "action_type": "RESEARCH_LOOK_TRANSITION",
+        "tool_name": null,
+        "payload": "{\"request_id\": \"req_ecaab480205aa3956c94c4f3\", \"agent_id\": \"agent:quant-research\", \"run_id\": \"q2-m2-v2-run\", \"experiment_id\": \"M2-BTC-ETH-CONVERGENCE-v2\", \"execution_id\": \"exec_d03e90cc108b4191a61c31270e1cef3a\", \"pre_run_state_hash\": \"dd7dea420530272290a6d4fd8019637752327f890039562398d5db22b1370403\", \"reserved_at\": \"2026-09-07T21:49:43.222+00:00\", \"look_key\": \"{\\\"dataset_classification\\\":\\\"DEVELOPMENT\\\",\\\"dataset_content_hash\\\":\\\"118bb4ca073b6470a4f09414a518d25f8f84cec2b06c112146116f16759086aa\\\",\\\"dataset_id\\\":\\\"depth_panel_c0_w2\\\",\\\"experiment_id\\\":\\\"M2-BTC-ETH-CONVERGENCE-v2\\\",\\\"research_family\\\":\\\"M2\\\",\\\"spec_hash\\\":\\\"2c50ef572a45cfcd2ce3dbd5e624908beae41359233ac49045de4945ffb01b9c\\\"}\", \"key_hash\": \"0efebda81c1d3a52252ad0297c9cdb0fd66120ba8ed8b6a4cbde83a2375145f3\", \"lease_expires_at\": \"2026-09-07T23:49:43.223+00:00\", \"kind\": \"EXECUTE_FROZEN_EXPERIMENT.allow\", \"adapter\": \"research_looks\", \"policy_verdict\": \"APPROVE\", \"source\": \"research_looks_v1\", \"envelope_hash\": \"865a5ba8d56a2856a178ec92cddff92a4a4cc0f346cae8cb8129109a93520d33\"}",
+        "policy_decision": "allow",
+        "policy_reason": "agent_governed_verdict_v2",
+        "status": "approved",
+        "prev_hash": "94a63bf5df09fd13235e0a18969abdec41d3b199f8f51b23716e87c23db236d3"
+      },
+      "decision_envelope": {
+        "request_id": "req_ecaab480205aa3956c94c4f3",
+        "agent_id": "agent:quant-research",
+        "run_id": "q2-m2-v2-run",
+        "experiment_id": "M2-BTC-ETH-CONVERGENCE-v2",
+        "execution_id": "exec_d03e90cc108b4191a61c31270e1cef3a",
+        "pre_run_state_hash": "dd7dea420530272290a6d4fd8019637752327f890039562398d5db22b1370403",
+        "reserved_at": "2026-09-07T21:49:43.222+00:00",
+        "look_key": "{\"dataset_classification\":\"DEVELOPMENT\",\"dataset_content_hash\":\"118bb4ca073b6470a4f09414a518d25f8f84cec2b06c112146116f16759086aa\",\"dataset_id\":\"depth_panel_c0_w2\",\"experiment_id\":\"M2-BTC-ETH-CONVERGENCE-v2\",\"research_family\":\"M2\",\"spec_hash\":\"2c50ef572a45cfcd2ce3dbd5e624908beae41359233ac49045de4945ffb01b9c\"}",
+        "key_hash": "0efebda81c1d3a52252ad0297c9cdb0fd66120ba8ed8b6a4cbde83a2375145f3",
+        "lease_expires_at": "2026-09-07T23:49:43.223+00:00",
+        "kind": "EXECUTE_FROZEN_EXPERIMENT.allow",
+        "adapter": "research_looks",
+        "policy_verdict": "APPROVE",
+        "source": "research_looks_v1",
+        "envelope_hash": "865a5ba8d56a2856a178ec92cddff92a4a4cc0f346cae8cb8129109a93520d33"
+      },
+      "signature": {
+        "ok": true,
+        "key_id": "ed25519_primary_v2",
+        "org_id": "00000000-0000-0000-0000-000000000001",
+        "algorithm": "ed25519",
+        "signature": "MDVWaagiKphRJyasSDWHmaqhtGxjfCkL3VQrm8ZRgTmouu9yWMUJOXN0kspFbUG3OQ3Lf+eKAqlIAshliIJNBg==",
+        "signed_at": "2026-09-07T21:49:43.225254+00:00",
+        "public_key": "KTwKiK6dvfU6+p6v2uWbUsSD6ALlSkzW07RSk76JFzo=",
+        "decision_id": "d5f123a3-abce-4146-b551-75bac85060e9",
+        "signer_type": "aegis_ed25519_v1",
+        "envelope_hash": "865a5ba8d56a2856a178ec92cddff92a4a4cc0f346cae8cb8129109a93520d33",
+        "signature_version": "sig2_v1"
+      }
+    },
+    {
+      "role": "consumption",
+      "decision_id": "d323193c-8a6f-40e5-8452-868d5098ba6a",
+      "event_hash": "2586c309a99be36d66a45d46166b6db5d83c28f4cc585beee1ec5a6d7292781d",
+      "recorded_at": "2026-09-07T21:49:56.059480",
+      "decision": {
+        "org_id": "00000000-0000-0000-0000-000000000001",
+        "run_id": "2f7bcd2a-1972-4453-857f-72b63918eab1",
+        "seq": 993,
+        "action_type": "RESEARCH_LOOK_TRANSITION",
+        "tool_name": null,
+        "payload": "{\"execution_id\": \"exec_d03e90cc108b4191a61c31270e1cef3a\", \"result_hash\": \"f104069c37ce0c0341484d583db4e30a3c5aefaed978140fad88452f77801882\", \"pre_run_state_hash\": \"dd7dea420530272290a6d4fd8019637752327f890039562398d5db22b1370403\", \"computed_at\": \"2026-09-07T21:49:55.728Z\", \"consumed_at\": \"2026-09-07T21:49:56.022+00:00\", \"agent_id\": \"agent:quant-research\", \"run_id\": \"q2-m2-v2-run\", \"request_id\": \"req_ecaab480205aa3956c94c4f3\", \"experiment_id\": \"M2-BTC-ETH-CONVERGENCE-v2\", \"key_hash\": \"0efebda81c1d3a52252ad0297c9cdb0fd66120ba8ed8b6a4cbde83a2375145f3\", \"kind\": \"EXECUTE_FROZEN_EXPERIMENT.consumed\", \"adapter\": \"research_looks\", \"policy_verdict\": \"APPROVE\", \"source\": \"research_looks_v1\", \"envelope_hash\": \"f6fe075cd2d461e097bb22aa264ce24a67183e166e43e0de10f907944a3a8721\"}",
+        "policy_decision": "allow",
+        "policy_reason": "agent_governed_verdict_v2",
+        "status": "approved",
+        "prev_hash": "8f3f0109f4e2cc6eb8d3a4a125991e1115b1582c8581a9bc113920d74f87f7e1"
+      },
+      "decision_envelope": {
+        "execution_id": "exec_d03e90cc108b4191a61c31270e1cef3a",
+        "result_hash": "f104069c37ce0c0341484d583db4e30a3c5aefaed978140fad88452f77801882",
+        "pre_run_state_hash": "dd7dea420530272290a6d4fd8019637752327f890039562398d5db22b1370403",
+        "computed_at": "2026-09-07T21:49:55.728Z",
+        "consumed_at": "2026-09-07T21:49:56.022+00:00",
+        "agent_id": "agent:quant-research",
+        "run_id": "q2-m2-v2-run",
+        "request_id": "req_ecaab480205aa3956c94c4f3",
+        "experiment_id": "M2-BTC-ETH-CONVERGENCE-v2",
+        "key_hash": "0efebda81c1d3a52252ad0297c9cdb0fd66120ba8ed8b6a4cbde83a2375145f3",
+        "kind": "EXECUTE_FROZEN_EXPERIMENT.consumed",
+        "adapter": "research_looks",
+        "policy_verdict": "APPROVE",
+        "source": "research_looks_v1",
+        "envelope_hash": "f6fe075cd2d461e097bb22aa264ce24a67183e166e43e0de10f907944a3a8721"
+      },
+      "signature": {
+        "ok": true,
+        "key_id": "ed25519_primary_v2",
+        "org_id": "00000000-0000-0000-0000-000000000001",
+        "algorithm": "ed25519",
+        "signature": "6HhVjOWutnT0OWHbEgf4BJ6LbWRbuS6zv6JQyZUfW2Km12WDKSgft+ZzwyD/4TdK5V06WGQJ0vDwWaRnbxMdCw==",
+        "signed_at": "2026-09-07T21:49:56.022568+00:00",
+        "public_key": "KTwKiK6dvfU6+p6v2uWbUsSD6ALlSkzW07RSk76JFzo=",
+        "decision_id": "9f91a87e-f962-4191-a5f5-f513253ed6ee",
+        "signer_type": "aegis_ed25519_v1",
+        "envelope_hash": "f6fe075cd2d461e097bb22aa264ce24a67183e166e43e0de10f907944a3a8721",
+        "signature_version": "sig2_v1"
+      }
+    }
+  ],
+  "chain": {
+    "ledger_run_id": "2f7bcd2a-1972-4453-857f-72b63918eab1",
+    "org_id": "00000000-0000-0000-0000-000000000001",
+    "seq_rule": "seq is per ledger run; prev_hash is the event_hash of seq-1 in the same run",
+    "links": [
+      {
+        "from_seq": 989,
+        "to_seq": 990
+      },
+      {
+        "from_seq": 992,
+        "to_seq": 993
+      }
+    ],
+    "not_included": [
+      {
+        "seq": 991,
+        "note": "a ledger record between the second refusal and the grant that this bundle does not disclose (its contents were not read for this bundle); continuity 990 -> 992 is therefore not shown by this bundle"
+      }
+    ],
+    "note": "Each link is checked as to.prev_hash == from.event_hash. A seq listed under not_included is a record this bundle does not disclose; continuity across it is NOT shown by this bundle."
+  },
+  "verification_keys": {
+    "keys": [
+      {
+        "algorithm": "ed25519",
+        "key_id": "ed25519_primary_v1",
+        "note": "Signs every record up to the 2026-08-22 cutover. Its private half was readable by every local account on the host from at least 2026-05-11 (a mode-644 systemd drop-in plus systemd's D-Bus disclosure of Environment=). No evidence of compromise exists and none could — a D-Bus read leaves no trace. Records signed under this key are ATTESTED but, for the exposure window, are NOT EXCLUSIVELY ATTRIBUTABLE to the API: the signature proves the key was used, not who used it. Retired from SIGNING at the 2026-08-22 cutover; permanently valid for VERIFICATION of the 20,292 records it signed.",
+        "public_key": "Rq1yTwgKVKyaRJ3W7QUFAVvt7tQ0m3ETQ5mXngNaLm4=",
+        "registered_at": "2026-04-28T00:00:00Z",
+        "retired_at": "2026-08-22T14:50:00Z",
+        "status": "verify_only"
+      },
+      {
+        "algorithm": "ed25519",
+        "key_id": "ed25519_primary_v2",
+        "note": "Signs every record from the 2026-08-22 cutover onward. Generated on the host directly into a 0600 root-only file by a process that set umask 0077 and used O_CREAT|O_EXCL, then moved into /etc/aegis/api.env (0600 root:root) and loaded via EnvironmentFile= — never Environment=, which systemd discloses over D-Bus to every local account and which is how v1 was exposed. The private half has never been in git, in a command argument, in shell history, in a log, or in a report.",
+        "public_key": "KTwKiK6dvfU6+p6v2uWbUsSD6ALlSkzW07RSk76JFzo=",
+        "registered_at": "2026-08-22T14:50:00Z",
+        "retired_at": null,
+        "status": "active_signing"
+      }
+    ],
+    "note": "Every Ed25519 key these records may be signed under. Select by the key_id on the record's signature bundle. A key with status verify_only no longer signs and never will again; it remains valid for the records it signed."
+  },
+  "anchoring": {
+    "status": "not_anchored",
+    "statement": "These records are signed and linked. The checkpoint containing them has NOT been publicly anchored, because public anchoring has been halted since 2026-09-01. No Merkle inclusion path exists for them: a snapshot-backed checkpoint is only produced by the anchoring job, which refuses to emit a root while a blocking record exists.",
+    "halted_since": "2026-09-01",
+    "reasons": [
+      "an unattributable record (signed with an unregistered ephemeral development key) was written to the production ledger on 2026-09-01; it is immutable and cannot be excused, so verified checkpoints refuse to emit",
+      "exception-cache authority is DESIGN_REQUIRED: the file that excuses records is not mechanically bound to the governed decision it cites, and anchoring must not resume until it is"
+    ],
+    "last_public_anchor": {
+      "release_tag": "anchor-ba7b3999-4d00-43a5-89be-4edb64f5118c-2026-09-01",
+      "checkpoint_id": "ba7b3999-4d00-43a5-89be-4edb64f5118c",
+      "checkpoint_root": "670538394b5fd9b72c5d86324b771a06cc1fa24bed23dafe1c984f137c42455d",
+      "generated_at": "2026-09-01T00:15:28.977830+00:00",
+      "note": "predates these records (written 2026-09-07); it does not cover them"
+    },
+    "reference_url": "https://github.com/isfandkhan123/aegis-anchors#anchoring-status",
+    "what_this_bundle_does_not_prove": "that these four records are the only records for this look, or that the look was not spent elsewhere. That needs the checkpoint they sit in, its Merkle inclusion path, and a public anchor covering it."
+  },
+  "manifest": {
+    "manifest_version": "aegis_governed_look_manifest_v1",
+    "bundle_version": "aegis_governed_look_proof_v1",
+    "subject_run_id": "q2-m2-v2-run",
+    "records": [
+      {
+        "role": "refusal",
+        "seq": 989,
+        "decision_id": "d7e991e8-b655-47f2-87d6-e275c40fc4c7",
+        "event_hash": "2ec3ac941d2a8332dd0de8e1d1708db3c2404b5cf8c2e4fdab15a4ee4986f439",
+        "signer_key_id": "ed25519_primary_v2",
+        "signed_decision_id": "81b7ce26-d959-467c-bdcb-4bf10b9a38ff"
+      },
+      {
+        "role": "refusal",
+        "seq": 990,
+        "decision_id": "ed01b462-6caf-4174-a925-af5c0f841d58",
+        "event_hash": "31f53c459dede4469615b6d84ac4febd67013d04d4c8b117d41cb57d6eb52841",
+        "signer_key_id": "ed25519_primary_v2",
+        "signed_decision_id": "ba2ceb3c-3c36-4495-ab86-56fb3f6008c8"
+      },
+      {
+        "role": "grant",
+        "seq": 992,
+        "decision_id": "66222a25-7a82-490c-8417-bb686d20c38e",
+        "event_hash": "8f3f0109f4e2cc6eb8d3a4a125991e1115b1582c8581a9bc113920d74f87f7e1",
+        "signer_key_id": "ed25519_primary_v2",
+        "signed_decision_id": "d5f123a3-abce-4146-b551-75bac85060e9"
+      },
+      {
+        "role": "consumption",
+        "seq": 993,
+        "decision_id": "d323193c-8a6f-40e5-8452-868d5098ba6a",
+        "event_hash": "2586c309a99be36d66a45d46166b6db5d83c28f4cc585beee1ec5a6d7292781d",
+        "signer_key_id": "ed25519_primary_v2",
+        "signed_decision_id": "9f91a87e-f962-4191-a5f5-f513253ed6ee"
+      }
+    ],
+    "signers": [
+      {
+        "key_id": "ed25519_primary_v2",
+        "public_key": "KTwKiK6dvfU6+p6v2uWbUsSD6ALlSkzW07RSk76JFzo=",
+        "status": "active_signing"
+      }
+    ],
+    "experiment_id": "M2-BTC-ETH-CONVERGENCE-v2",
+    "spec_hash": "2c50ef572a45cfcd2ce3dbd5e624908beae41359233ac49045de4945ffb01b9c",
+    "dataset_id": "depth_panel_c0_w2",
+    "dataset_content_hash": "118bb4ca073b6470a4f09414a518d25f8f84cec2b06c112146116f16759086aa",
+    "execution_id": "exec_d03e90cc108b4191a61c31270e1cef3a",
+    "result_hash": "f104069c37ce0c0341484d583db4e30a3c5aefaed978140fad88452f77801882",
+    "final_state": "CONSUMED",
+    "anchoring_status": "not_anchored",
+    "hash_rule": "sha256 over canonical JSON (sorted keys, no whitespace, UTF-8); bundle_content_hash covers every top-level key except manifest; manifest_hash covers the manifest without manifest_hash",
+    "bundle_content_hash": "de56abc938514f88fe4cf6951020661b7829de4ed872c9f5f7462a23722b6267",
+    "manifest_hash": "5ed5fbbbdba92e76ac541d12e6ecda22e83518331b11237b0f2719fdb7c5c0f6"
+  }
+}

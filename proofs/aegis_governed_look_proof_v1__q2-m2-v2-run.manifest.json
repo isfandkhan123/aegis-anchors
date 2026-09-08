@@ -1,0 +1,57 @@
+{
+  "manifest_version": "aegis_governed_look_manifest_v1",
+  "bundle_version": "aegis_governed_look_proof_v1",
+  "subject_run_id": "q2-m2-v2-run",
+  "records": [
+    {
+      "role": "refusal",
+      "seq": 989,
+      "decision_id": "d7e991e8-b655-47f2-87d6-e275c40fc4c7",
+      "event_hash": "2ec3ac941d2a8332dd0de8e1d1708db3c2404b5cf8c2e4fdab15a4ee4986f439",
+      "signer_key_id": "ed25519_primary_v2",
+      "signed_decision_id": "81b7ce26-d959-467c-bdcb-4bf10b9a38ff"
+    },
+    {
+      "role": "refusal",
+      "seq": 990,
+      "decision_id": "ed01b462-6caf-4174-a925-af5c0f841d58",
+      "event_hash": "31f53c459dede4469615b6d84ac4febd67013d04d4c8b117d41cb57d6eb52841",
+      "signer_key_id": "ed25519_primary_v2",
+      "signed_decision_id": "ba2ceb3c-3c36-4495-ab86-56fb3f6008c8"
+    },
+    {
+      "role": "grant",
+      "seq": 992,
+      "decision_id": "66222a25-7a82-490c-8417-bb686d20c38e",
+      "event_hash": "8f3f0109f4e2cc6eb8d3a4a125991e1115b1582c8581a9bc113920d74f87f7e1",
+      "signer_key_id": "ed25519_primary_v2",
+      "signed_decision_id": "d5f123a3-abce-4146-b551-75bac85060e9"
+    },
+    {
+      "role": "consumption",
+      "seq": 993,
+      "decision_id": "d323193c-8a6f-40e5-8452-868d5098ba6a",
+      "event_hash": "2586c309a99be36d66a45d46166b6db5d83c28f4cc585beee1ec5a6d7292781d",
+      "signer_key_id": "ed25519_primary_v2",
+      "signed_decision_id": "9f91a87e-f962-4191-a5f5-f513253ed6ee"
+    }
+  ],
+  "signers": [
+    {
+      "key_id": "ed25519_primary_v2",
+      "public_key": "KTwKiK6dvfU6+p6v2uWbUsSD6ALlSkzW07RSk76JFzo=",
+      "status": "active_signing"
+    }
+  ],
+  "experiment_id": "M2-BTC-ETH-CONVERGENCE-v2",
+  "spec_hash": "2c50ef572a45cfcd2ce3dbd5e624908beae41359233ac49045de4945ffb01b9c",
+  "dataset_id": "depth_panel_c0_w2",
+  "dataset_content_hash": "118bb4ca073b6470a4f09414a518d25f8f84cec2b06c112146116f16759086aa",
+  "execution_id": "exec_d03e90cc108b4191a61c31270e1cef3a",
+  "result_hash": "f104069c37ce0c0341484d583db4e30a3c5aefaed978140fad88452f77801882",
+  "final_state": "CONSUMED",
+  "anchoring_status": "not_anchored",
+  "hash_rule": "sha256 over canonical JSON (sorted keys, no whitespace, UTF-8); bundle_content_hash covers every top-level key except manifest; manifest_hash covers the manifest without manifest_hash",
+  "bundle_content_hash": "de56abc938514f88fe4cf6951020661b7829de4ed872c9f5f7462a23722b6267",
+  "manifest_hash": "5ed5fbbbdba92e76ac541d12e6ecda22e83518331b11237b0f2719fdb7c5c0f6"
+}
