@@ -1,4 +1,4 @@
-# aegis-anchors — public governance anchors & portable decision proofs
+# aegis-anchors - public governance anchors & portable decision proofs
 
 This repository is the **public commitment surface** for the Aegis governance ledger. It holds three kinds of artifact:
 
